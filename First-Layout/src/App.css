@@ -1,0 +1,18 @@
+button{
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+li{
+  transition: all .3s linear;
+  cursor: pointer;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-origin: border-box;
+  background-color: #1d1e1fe3;
+  overflow-x: hidden;
+}

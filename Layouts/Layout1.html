@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <link rel="stylesheet" href="Layout1.css">
+    <link rel="stylesheet" href="Projects.css">
+</head>
+<body>
+
+    
+    
+    
+
+    
+
+    
+    
+
+    <script>
+        const Tabs = document.querySelectorAll(".tabs")
+        const MarkedTabs = document.querySelectorAll(".marker-tab")
+        const homeImages = document.querySelectorAll(".home-tab-picture")
+
+        function switchTab(page) {
+            for(let i = 0; i < Tabs.length; i++){
+                Tabs[i].classList.replace("active","not-active")
+                MarkedTabs[i].classList.replace("marked", "not-marked")
+            }
+
+            Tabs[page].classList.replace("not-active", "active")
+            MarkedTabs[page].classList.replace("not-marked", "marked")
+
+            for(let i = 0; i < Tabs.length; i++){
+                if(Tabs[i].classList.contains("active")){
+                    let x = 0
+
+                    
+                    
+                }
+            }
+        }
+           
+        function HomeTabImage(){
+            if(homeImages[0].classList.contains("infront")){
+                homeImages[0].classList.replace("infront", "back")
+                homeImages[1].classList.replace("back", "infront")
+            } else {
+                homeImages[0].classList.replace("back", "infront")
+                homeImages[1].classList.replace("infront", "back")
+            }
+        }
+
+
+         
+    </script>
+</body>
+</html>

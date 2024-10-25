@@ -1,0 +1,150 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(240, 248, 255, 0.274);
+    border-bottom: 1px solid white;
+    border-radius: 0px 0px 10px 10px;
+    align-items: center;
+}
+
+.tab-wrapper {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.title {
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.more-tabs {
+    display: none;
+}
+
+.tabs {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0rem 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all .25s linear;
+}
+.tabs:hover {
+    color: white;
+}
+.active {
+    color: white;
+    filter: drop-shadow(0 0 2px white);
+}
+.not-active {
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.marked {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: -4px;
+    translate: -50% 0px;
+    border-bottom: 3px solid white;
+    transform: rotateY(0deg);
+    animation: markedTab .25s ease-in;
+}
+
+.LogIn-SignUp-wrapper {
+    display: flex;
+    gap: .5rem;
+    margin-right: 1rem;
+}
+
+.LogIn-SignUp-wrapper > .buttons {
+    background-color: rgba(255, 255, 255, 0.651);
+    padding: .5rem 1rem;
+    color: white;
+    border: 2px solid white;
+    font-weight: 700;
+}
+
+.LogIn-SignUp-wrapper > .buttons:hover {
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    background-color: white;
+}
+
+.LogIn-SignUp-wrapper .SignUp{
+    background-color: transparent;
+}
+
+@media (max-width: 700px) {
+    .header {
+        height: 2rem;
+    }
+    .header h1{
+        font-size: 1rem;
+    }
+    .more-tabs {
+        display: block;
+        color: rgb(255, 254, 254);
+        font-size: 1.7rem;
+        font-weight: 524;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0;
+        background-color: transparent;
+    }
+    #animate {
+        z-index: -1;
+        position: absolute;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.534);
+        transform: translateX(-50%);
+    }
+    .more-tabs:hover {
+        clip-path: text;
+        color: rgb(255, 255, 255);
+        transition: all .3s ease-out;
+        cursor: pointer;
+        outline: none;
+    }
+    .more-tabs:focus-visible{
+        display: none;
+    }
+    .more-tabs:hover #animate {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        animation: animate .15s linear;
+    }
+    .LogIn-SignUp-wrapper {
+        display: flex;
+        gap: .8rem;
+    }
+    
+    .tab-wrapper .tabs {
+        display: none;
+    }
+    
+    @keyframes animate {
+        from { width: 0px; height: 0px; } to { width: 30px; height: 30px; }
+    }
+}
+
+@media (max-width: 1000px){
+    .LogIn-SignUp-wrapper > .buttons {
+        padding: .25rem .5rem;
+        font-size: .5rem;
+    }
+}
+
+@keyframes markedTab {
+    from {
+        transform: rotateY(90deg);
+    }
+}

@@ -1,0 +1,133 @@
+.Home-wrapper {
+    padding: .5rem;
+    width: 90%;
+    border-radius: .7rem;
+    margin-inline: auto;
+    grid-template-rows: 1fr 1fr;
+} 
+
+.Home-wrapper .left .home-tab-picture {
+    width: 12rem;
+    height: 12rem;
+    justify-content: center;
+    margin: auto;
+    margin-top: 25px;
+    display: block;
+    border: 4px solid white;
+    border-radius: .4rem;
+    filter: contrast(.8);
+    box-shadow: 2px 2px 10px white;
+}
+.Home-wrapper .left {
+    display: flex;   
+    justify-content:center ;
+    align-items: center;
+}
+.Home-wrapper .left .image-container{ 
+    width: fit-content;
+    position: relative;
+} 
+
+.Home-wrapper .left .image-container .infront {  
+    position: absolute;
+    top: 0%;
+    left: -25%;
+    transform: translate(75% -50%);
+}
+
+.Home-wrapper .left .image-container .back{
+    transform: translateX(2em) scale(1.1);
+}
+
+.Home-wrapper .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Home-wrapper .right h1, .Home-wrapper .right p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: 1rem 0px;
+}
+
+.Home-wrapper .right p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}   
+
+.Home-wrapper .right .home-button {
+    width: fit-content;
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    color: white;
+    background-color: #a7abafc4;
+    border: .2rem solid white;  
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .Home-wrapper .left {
+        margin-bottom: 5rem;
+    }
+    .Home-wrapper .left .home-tab-picture {
+        width: 10rem;
+        height: 10rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .Home-wrapper .right h1 {
+        font-size: 2rem;
+    }
+    .Home-wrapper .right p {
+        font-size: .6rem;
+    }
+}
+
+
+@media (min-width: 700px) {
+    .Home-wrapper .right p {
+        margin: .5rem 4rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .Home-wrapper {
+        display: flex;
+        height: fit-content;
+    }
+    .Home-wrapper .left {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .Home-wrapper .left .home-tab-picture {
+        width: 20rem;
+        height: 20rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .Home-wrapper .right{
+        width: 50%;
+        margin-right: .75 rem;
+    }
+    .Home-wrapper .right h1 {
+        font-size: 3rem;
+    }
+    .Home-wrapper .right p {
+        font-size: 1.8rem;
+        margin: .5rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
