@@ -3,7 +3,7 @@ import '../Projects/Projects.css'
 export default function Projects({tab}) {
 
     return (
-        <div className="Project-Wrapper">
+        <div className="Project-Wrapper" id='Projects'>
             <div className="top">
                 <div className="left">
                     <h1>Side Projects</h1>

@@ -6,21 +6,13 @@ import SideBar from './App Components/NavigationBar/SideBar.jsx'
 import { useState } from 'react'
 function App() {
   const [tab, setTab] = useState(0)
-  const [shown, setShown] = useState(0)
+  const [shown, setShown] = useState(false)
 
-  window.onscroll = () => {
-    if(window.innerWidth <= 700){
-      setShown(1)
-      console.log(shown)
-    } else {
-      setShown(0)
-    }
-  }
 
   return (
     <div className="App">
       <SideBar shown={shown} tab={tab} setTab={(tab)=>setTab(tab)}></SideBar>
-      <NavBar setTab={(tab)=>setTab(tab)} tab={tab}></NavBar>
+      <NavBar shown={shown} setShown={(par)=>{setShown(par)}} setTab={(tab)=>setTab(tab)} tab={tab}></NavBar>
       <Home></Home>
       <Projects></Projects>
     </div>

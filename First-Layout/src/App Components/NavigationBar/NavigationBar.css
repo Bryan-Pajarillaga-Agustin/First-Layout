@@ -1,13 +1,19 @@
+a {
+    text-decoration: none;
+    transition: all .25s ease-out;
+}
+
 .header {
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 3rem;
-    background-color: rgba(240, 248, 255, 0.274);
-    border-bottom: 1px solid white;
-    border-radius: 0px 0px 10px 10px;
+    background-color: #20111142;
+    box-shadow: 0 4px 10px 4px rgb(26, 24, 39);
+    backdrop-filter: blur(30px);
     align-items: center;
+    z-index: 1;
 }
 
 .tab-wrapper {
@@ -34,7 +40,7 @@
     cursor: pointer;
     transition: all .25s linear;
 }
-.tabs:hover {
+a:hover {
     color: white;
 }
 .active {
@@ -78,6 +84,21 @@
 
 .LogIn-SignUp-wrapper .SignUp{
     background-color: transparent;
+}
+
+@media (max-width: 1000px){
+    .LogIn-SignUp-wrapper{
+        display: flex;
+        align-items: center;
+        gap: .35rem;
+    }
+    .LogIn-SignUp-wrapper > .buttons {
+        display: flex;
+        align-items: center;
+        font-size: .6rem;
+        height: 1rem;
+        padding-inline: .5rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -130,19 +151,54 @@
     .tab-wrapper .tabs {
         display: none;
     }
-    
     @keyframes animate {
         from { width: 0px; height: 0px; } to { width: 30px; height: 30px; }
     }
 }
 
-@media (max-width: 1000px){
-    .LogIn-SignUp-wrapper > .buttons {
-        padding: .25rem .5rem;
+@media (max-width: 500px) {
+    .header {
+        height: 1rem;
+    }
+    .header h1{
         font-size: .5rem;
     }
+    .more-tabs {
+        display: block;
+        color: rgb(255, 254, 254);
+        font-size: .75rem;
+        font-weight: 524;
+    }
+    .more-tabs:hover {
+        clip-path: text;
+        color: rgb(255, 255, 255);
+        transition: all .3s ease-out;
+        cursor: pointer;
+        outline: none;
+    }
+    .more-tabs:focus-visible{
+        display: none;
+    }
+    .more-tabs:hover #animate {
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        animation: animate .15s linear;
+    }
+    .LogIn-SignUp-wrapper {
+        display: flex;
+        gap: .25rem;
+    }
+    .LogIn-SignUp-wrapper > .buttons {
+        height: fit-content;
+        padding: .1rem .4rem;
+        font-size: .4rem;
+        border: 1px solid white;
+    }
+    @keyframes animate {
+        from { width: 0px; height: 0px; }
+    }
 }
-
 @keyframes markedTab {
     from {
         transform: rotateY(90deg);

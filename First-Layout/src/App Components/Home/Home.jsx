@@ -2,11 +2,11 @@ import '../Home/Home.css'
 
 export default function Home({tab}){
     return (
-        <div className="Home-wrapper">
+        <div className="Home-wrapper" id='Home'>
             <div className="left">
                 <div className="image-container">
-                    <img src="../Images/HomePic.jpg" className="home-tab-picture back" width="10" height="10" />
-                    <img src="../Images/HomePic2.jpn.jpg" className="home-tab-picture infront" width="10" height="10" />
+                    <img src='../Images/HomePic2.jpg' className="home-tab-picture back" width={10} height={10} />
+                    <img src='../Images/HomePic1.jpg' className="home-tab-picture infront" width={10} height={10} />
                 </div>
             </div>
             <div className="right">
