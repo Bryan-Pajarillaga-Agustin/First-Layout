@@ -199,6 +199,50 @@ a:hover {
         from { width: 0px; height: 0px; }
     }
 }
+
+@media (max-width: 450px) and (max-height: 750px){
+    .header {
+        height: 3rem;
+    }
+    .header h1{
+        font-size: 1.5rem;
+    }
+    .more-tabs {
+        display: block;
+        color: rgb(255, 254, 254);
+        font-size: 1.5rem;
+        font-weight: 524;
+    }
+    .more-tabs:hover {
+        clip-path: text;
+        color: rgb(255, 255, 255);
+        transition: all .3s ease-out;
+        cursor: pointer;
+        outline: none;
+    }
+    .more-tabs:focus-visible{
+        display: none;
+    }
+    .more-tabs:hover #animate {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        animation: animate .15s linear;
+    }
+    .LogIn-SignUp-wrapper {
+        display: flex;
+        gap: .5rem;
+    }
+    .LogIn-SignUp-wrapper > .buttons {
+        height: fit-content;
+        padding: .35rem .5rem;
+        font-size: .8rem;
+        border: 1px solid white;
+    }
+    @keyframes animate {
+        from { width: 0px; height: 0px;}
+    }
+}
 @keyframes markedTab {
     from {
         transform: rotateY(90deg);

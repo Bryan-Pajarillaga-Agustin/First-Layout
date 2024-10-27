@@ -1,0 +1,35 @@
+.top .right {
+    background-color: #afafb1d0;
+    border: 4px solid white;
+    border-radius: .5rem;
+    width: 90vw;
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.top .right::-webkit-scrollbar{
+    display: none;
+}
+.right h1{
+    padding: 1.5rem;
+    color: white;
+    text-shadow: 0 0 .24rem white;
+}
+.right p {
+    font-size: 1.35rem;
+    text-indent: 2rem;
+    color: white;
+    padding: 1rem;
+    margin-inline: .5rem;
+}
+
+@media screen and (max-width: 500px) and (max-height: 700px){
+    
+    .top .left h1{
+        font-size: 1.25rem;
+    }
+     .right p{
+        font-size: .5rem;
+        text-indent: 0rem;
+    }
+}

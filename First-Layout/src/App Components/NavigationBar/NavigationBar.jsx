@@ -2,9 +2,10 @@ import { useRef, useState } from "react"
 import '../NavigationBar/NavigationBar.css'
 
 export default function NavBar({setTab, tab, setShown}){
+    const NavigationBar = useRef(null)
 
     window.onscroll = () => {
-        NavBar.current.classList.toggle("stickyNav", window.scrollY > 50)
+        NavigationBar.current.classList.toggle("stickyNav", window.scrollY > 50)
     }
 
 
@@ -12,7 +13,7 @@ export default function NavBar({setTab, tab, setShown}){
     return (
         
         <>
-            <div className="header" ref={NavBar}>
+            <div className="header" ref={NavigationBar}>
                 <h1 className="title">Portfolio</h1>
                 <ul className="tab-wrapper">
                     <li className="tabs" onClick={(tab)=>setTab(0)}> <a href="#Home" className={tab == 0 ? "active" : "not-active"}>Home</a> <span className={tab === 0 ? "markers-tab marked" : "markers-tab not-marked"}></span></li>

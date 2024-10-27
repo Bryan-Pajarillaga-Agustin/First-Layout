@@ -11,8 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <SideBar shown={shown} tab={tab} setTab={(tab)=>setTab(tab)}></SideBar>
-      <NavBar shown={shown} setShown={(par)=>{setShown(par)}} setTab={(tab)=>setTab(tab)} tab={tab}></NavBar>
+      <SideBar shown={shown} tab={tab} setTab={(tab)=>setTab(tab)} setShown={(par)=>{setShown(par)}}></SideBar>
+      <NavBar shown={shown}  setTab={(tab)=>setTab(tab)} tab={tab}></NavBar>
       <Home></Home>
       <Projects></Projects>
     </div>

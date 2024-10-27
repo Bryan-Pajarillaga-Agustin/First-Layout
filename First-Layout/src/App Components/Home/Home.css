@@ -152,21 +152,21 @@
 
 /* Phone */
 
-@media screen and (max-width: 450px) and (min-height: 700px){
+@media screen and (max-width: 500px) and (min-height: 700px){
     .Home-wrapper{
         display: flex;
         flex-direction: column;
     }
     .Home-wrapper .left, .Home-wrapper .right{
         width: 90vw;
-        height: 46.7vh;
+        height: 50.7vh;
     }
     .Home-wrapper .left .home-tab-picture{
-        width: 10rem;
-        height: 10rem;
+        width: 12rem;
+        height: 12rem;
     } 
     .Home-wrapper .right p {
-        font-size: .75rem;
+        font-size: .9rem;
         margin-inline: .5rem;
         margin-right: .1rem;
     } 
@@ -175,7 +175,7 @@
         margin-bottom: .5rem;
     }
     .Home-wrapper .right .home-button{
-        font-size: rem;
+        font-size: 1rem;
         padding: .5rem .75rem;
     }
 }
