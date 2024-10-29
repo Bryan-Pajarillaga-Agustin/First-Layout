@@ -1,10 +1,32 @@
 .Projects {
     width: 100%;
-    height: fit-content;
+    height: 200vh;
     border-top: 2px solid black;
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
+}
+@keyframes slideUpComp {
+    from {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.left, .right, .bottom{
+    opacity: 0;
+    transition: all .5s linear;
+}
+.animateProj .left, .reanimateProj .left{
+    animation: slideUpComp 0.5s ease-in-out forwards 0s;
+}
+.animateProj .right, .reanimateProj .right{
+    animation: slideUpComp 0.5s ease-in-out forwards 0.5s;
+}
+.animateProj .bottom, .reanimateProj .bottom{
+    animation: slideUpComp 0.5s ease-in-out forwards 2s;
 }
 .Projects .top {
     border-radius: .5rem;
@@ -113,17 +135,38 @@
     }
 }
 
-/* Phone */
+/* Desktop / Laptop */
 
+@media (max-width: 900px){
+    .top .left h1 {
+        font-size: 1rem;
+        padding: 0rem;
+        margin: .4rem;
+    }
+    .top .left .project-wrapper {
+        width: 80%;
+        height: 65%;
+    }
+    .top .left .ProjectTitle{
+        font-size: .95rem;
+    }
+    .leftSlide, .rightSlide{
+        
+        font-size: 1rem;
+    }
+}
+
+/* Phone */
+/* 43 +  */
 @media screen and (max-width: 500px) and (max-height: 750px){
     .Projects{
-        height: 120vh;
+        height: 130vh;
     }
     .Projects .top{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 100vh;
+        height: 60vh;
         align-items: center;
         gap: 2rem;
     }
@@ -135,7 +178,7 @@
     }
     .Projects .top .left .project-wrapper{
         width: 70%;
-        height: 60%;
+        height: 74%;
     }
     .leftSlide, .rightSlide{
         font-size: 1rem;

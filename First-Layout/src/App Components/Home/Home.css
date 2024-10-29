@@ -4,7 +4,18 @@
     border-radius: .7rem;
     margin-inline: auto;
 } 
-
+.Home-wrapper > div {
+    opacity: 0;
+}
+@keyframes slideUpComp {
+    from {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
+    to {
+        opacity: 1;
+    }
+}
 .Home-wrapper .left .home-tab-picture {
     width: 12rem;
     height: 12rem;
@@ -22,6 +33,7 @@
     justify-content:center ;
     align-items: center;
     height: 50vh;
+    animation: slideUpComp 0.5s ease-in-out forwards 0s;
 }
 .Home-wrapper .left .image-container{ 
     width: fit-content;
@@ -45,6 +57,7 @@
     justify-content: center;
     align-items: center;
     height: 50vh;
+    animation: slideUpComp 0.5s ease-in-out forwards 0.5s;
 }
 .Home-wrapper .right h1, .Home-wrapper .right p {
     font-family: Georgia, 'Times New Roman', Times, serif;

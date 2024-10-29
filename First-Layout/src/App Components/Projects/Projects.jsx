@@ -4,7 +4,12 @@ import '../Projects/TopRight.css'
 import '../Projects/Bottom.css'
 import ProjectDisplay from './ProjectDisplay'
 
-export default function Projects({tab}) {
+export default function Projects({tab, setProjectsTab}) {
+    const ProjectsTab = useRef()
+    useEffect(()=>{
+        setProjectsTab(ProjectsTab.current)
+    },[])
+
     const [index, setIndex] = useState(0)
     const img1 = useRef(null)
     const img2 = useRef(null)
@@ -47,7 +52,7 @@ export default function Projects({tab}) {
     }
 
     return (
-        <div className="Projects" id='Projects'>
+        <div className={tab === 1 ? "Projects slideAnimation" : "Projects"} ref={ProjectsTab} id='Projects'>
             <div className="top">
                 <div className="left">
                     <h1>Side Projects:</h1>
@@ -77,6 +82,31 @@ export default function Projects({tab}) {
             </div>
             <div className="bottom">
                 <h1>Languages: </h1>
+                <div className="LanguageWrapper">
+
+                   <div className="row">
+                        <div className="Languages">
+                            <img src="./Images/JS.png" className="EachPic" />
+                            <h1 className="LangName">JavaScript</h1>
+                        </div>
+                        <div className="Languages">
+                            <img src="./Images/C++.png" className="EachPic" />
+                            <h1 className="LangName">C++</h1>
+                        </div>
+                   </div>
+
+                   <div className="row">
+                        <div className="Languages">
+                            <img src="./Images/C.png" className="EachPic" />
+                            <h1 className="LangName">C Programming</h1>
+                        </div>
+                        <div className="Languages">
+                            <img src="./Images/Java.png" className="EachPic" />
+                            <h1 className="LangName">Java</h1>
+                        </div>
+                   </div>
+                    
+                </div>
             </div>
         </div>
     )

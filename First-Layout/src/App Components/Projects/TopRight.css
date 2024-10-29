@@ -3,12 +3,8 @@
     border: 4px solid white;
     border-radius: .5rem;
     width: 90vw;
-    height: 60vh;
     overflow-x: hidden;
     overflow-y: scroll;
-}
-.top .right::-webkit-scrollbar{
-    display: none;
 }
 .right h1{
     padding: 1.5rem;
@@ -21,15 +17,31 @@
     color: white;
     padding: 1rem;
     margin-inline: .5rem;
+    text-align: center;
 }
 
-@media screen and (max-width: 500px) and (max-height: 700px){
-    
-    .top .left h1{
-        font-size: 1.25rem;
+@media (max-width: 900px){
+    .right h1{
+        font-size: 1rem;
+        padding: 0;
+        margin: 1rem 0 0 1rem;
+    }
+    .right p {
+        font-size: .85rem;
+        text-indent: 1rem;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (max-height: 750px){
+    .top .right {
+        height: 40vh;
     }
      .right p{
-        font-size: .5rem;
+        font-size: 1rem;
         text-indent: 0rem;
+    }
+    .right h1 {
+        font-size: 1.5rem;
     }
 }
